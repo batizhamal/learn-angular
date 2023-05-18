@@ -1,0 +1,45 @@
+.content {
+	padding: 20px;
+}
+
+.users {
+	margin-top: 20px;
+
+	.user {
+		display: flex;
+		align-items: center;
+		border-radius: 20px;
+		margin: 20px 20px 20px 0;
+		padding: 30px;
+		width: 305px;
+		float: left;
+		border: 1px solid rgba(27, 31, 36, 0.15);
+		border-radius: 20px;
+		box-shadow: 0 1px 0 rgba(27, 31, 36, 0.04);
+		background-color: #f6f8fa;
+
+		&-img {
+			width: 100px;
+			height: 100px;
+			object-fit: cover;
+			border-radius: 50%;
+			margin-right: 30px;
+		}
+
+		&-name {
+			font-weight: bold;
+			font-size: 22px;
+		}
+
+		&-btn {
+			margin-top: 30px;
+			height: 35px;
+			border: 1px solid rgba(27, 31, 36, 0.15);
+			border-radius: 5px;
+			box-shadow: 0 1px 0 rgba(27, 31, 36, 0.04);
+			background-color: #24292f;
+			color: white;
+			padding: 10px;
+		}
+	}
+}

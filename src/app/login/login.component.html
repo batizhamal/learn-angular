@@ -1,0 +1,27 @@
+<div class="login-container">
+	<img src="assets/icons/film.svg" class="logo" />
+	<div class="login-text">Sign in to Angular Movies</div>
+
+	<div [hidden]="errorMessage == ''" class="error-container">
+		<span>{{ errorMessage }}</span>
+		<div class="error-container-close-btn" (click)="hideErrorMessage()">x</div>
+	</div>
+
+	<form #loginForm="ngForm" (ngSubmit)="login(loginForm)">
+		<div class="login-form">
+			<div class="form-group">
+				<label for="username">Username</label>
+				<input ngModel required type="text" name="username" class="form-control" #username="ngModel" />
+				<small *ngIf="!username.valid && username.touched">Username is required</small>
+			</div>
+			<div class="form-group">
+				<label for="password">Password</label>
+				<input ngModel required type="password" name="password" class="form-control" #password="ngModel" />
+				<small *ngIf="!password.valid && password.touched">Password is required</small>
+			</div>
+			<div class="btn-container">
+				<button type="submit" class="btn btn-dark" [disabled]="!loginForm.valid">Login</button>
+			</div>
+		</div>
+	</form>
+</div>
